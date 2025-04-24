@@ -1,0 +1,20 @@
+<idea-plugin>
+    <id>com.sshhhdev.svnbranchbar</id>
+    <name>SvnBranchBar</name>
+    <version>1.0.0</version>
+    <vendor>sshhh.dev</vendor>
+
+    <!-- 지원하는 IntelliJ 버전 범위 -->
+    <idea-version since-build="233" until-build="251.*"/>
+
+    <!-- StatusBar 위젯 팩토리 등록 -->
+    <extensions defaultExtensionNs="com.intellij">
+        <statusBarWidgetFactory implementation="com.sshhhdev.svnbranchbar.SvnBranchStatusBarFactory"/>
+    </extensions>
+
+    <!-- 앱 시작 시 초기화 클래스 (선택사항) -->
+    <applicationListeners>
+        <listener class="com.sshhhdev.svnbranchbar.MyStartupActivity"
+                  topic="com.intellij.openapi.startup.StartupActivity"/>
+    </applicationListeners>
+</idea-plugin>
